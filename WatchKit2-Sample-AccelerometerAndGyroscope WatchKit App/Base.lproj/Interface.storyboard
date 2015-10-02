@@ -1,15 +1,100 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ohq-2b-A9d">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8089"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Gyroscope Interface Controller-->
+        <scene sceneID="yYv-3L-5Fq">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="m5R-vV-mfy" customClass="GyroscopeInterfaceController" customModule="WatchKit2_Sample_AccelerometerAndGyroscope_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="陀螺仪" textAlignment="left" id="eTg-lO-2CJ"/>
+                        <group width="1" height="60" alignment="left" id="75p-vi-q44">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" image="point" id="sWe-o5-xyu"/>
+                            </items>
+                            <color key="backgroundColor" red="0.65139364860000004" green="1" blue="0.9252029477" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" layout="vertical" id="kHP-w1-pxh">
+                            <items>
+                                <group width="1" alignment="left" id="te9-fq-eIn">
+                                    <items>
+                                        <label width="50" alignment="left" text="X:" textAlignment="right" id="bJH-bG-zlD"/>
+                                        <label alignment="center" text="Label" id="Xmj-IU-6Pb"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="xVj-bK-hp6">
+                                    <items>
+                                        <label width="50" alignment="left" text="Y:" textAlignment="right" id="54m-5F-S9Q"/>
+                                        <label alignment="center" text="Label" id="Zj7-ba-Vt4"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="jAM-Za-mMp">
+                                    <items>
+                                        <label width="50" alignment="left" text="Z:" textAlignment="right" id="lci-Jd-K1F"/>
+                                        <label alignment="center" text="Label" id="0ow-lz-Nma"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelX" destination="Xmj-IU-6Pb" id="u7p-Ea-aB4"/>
+                        <outlet property="labelY" destination="Zj7-ba-Vt4" id="VeI-5f-mQK"/>
+                        <outlet property="labelZ" destination="0ow-lz-Nma" id="blf-Sj-sPh"/>
+                        <outlet property="pointImg" destination="sWe-o5-xyu" id="g05-39-gdM"/>
+                    </connections>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="375" y="415.5"/>
+        </scene>
+        <!--Accelerometer Interface Controller-->
+        <scene sceneID="oH3-5R-MGm">
+            <objects>
+                <controller hidesWhenLoading="NO" id="Ohq-2b-A9d" customClass="AccelerometerInterfaceController" customModule="WatchKit2_Sample_AccelerometerAndGyroscope_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="加速计" id="t4I-3U-nQ4"/>
+                        <group width="1" height="60" alignment="left" id="i3g-C1-sfD">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" image="point" id="A35-gJ-1C7"/>
+                            </items>
+                            <color key="backgroundColor" red="0.72126527080000002" green="0.86400093469999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </group>
+                        <group width="1" alignment="left" id="0fr-XH-qDr">
+                            <items>
+                                <group width="1" alignment="left" id="Hig-PI-meh">
+                                    <items>
+                                        <label width="50" alignment="left" text="X:" textAlignment="right" id="444-Mz-Fum"/>
+                                        <label height="20" alignment="left" text="Label" id="mlb-IP-a09"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="di7-DD-ea2">
+                            <items>
+                                <label width="50" alignment="left" text="Y:" textAlignment="right" id="dZd-1f-ug8"/>
+                                <label alignment="left" text="Label" id="Ma6-RW-HmV"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="GOY-yD-4wX">
+                            <items>
+                                <label width="50" alignment="left" text="Z:" textAlignment="right" id="Etj-ha-PDz"/>
+                                <label alignment="left" text="Label" id="tHC-C2-0o3"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelX" destination="mlb-IP-a09" id="suY-Yu-DMv"/>
+                        <outlet property="labelY" destination="Ma6-RW-HmV" id="UZB-VW-XDE"/>
+                        <outlet property="labelZ" destination="tHC-C2-0o3" id="KIS-Pn-KUr"/>
+                        <outlet property="pointImg" destination="A35-gJ-1C7" id="pNw-Ma-Vpv"/>
+                        <segue destination="m5R-vV-mfy" kind="relationship" relationship="nextPage" id="EY6-b4-kI9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="173" y="414.75"/>
         </scene>
     </scenes>
 </document>

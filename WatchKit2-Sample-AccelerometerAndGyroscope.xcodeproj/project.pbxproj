@@ -16,9 +16,10 @@
 		0D040CB11B772B85009C7510 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D040CAF1B772B85009C7510 /* Interface.storyboard */; };
 		0D040CB31B772B85009C7510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D040CB21B772B85009C7510 /* Assets.xcassets */; };
 		0D040CBA1B772B85009C7510 /* WatchKit2-Sample-AccelerometerAndGyroscope WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0D040CB91B772B85009C7510 /* WatchKit2-Sample-AccelerometerAndGyroscope WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0D040CBF1B772B85009C7510 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D040CBE1B772B85009C7510 /* InterfaceController.swift */; };
 		0D040CC11B772B85009C7510 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D040CC01B772B85009C7510 /* ExtensionDelegate.swift */; };
 		0D040CC31B772B85009C7510 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D040CC21B772B85009C7510 /* Assets.xcassets */; };
+		0D040CD41B772BA5009C7510 /* AccelerometerInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D040CD21B772BA5009C7510 /* AccelerometerInterfaceController.swift */; };
+		0D040CD51B772BA5009C7510 /* GyroscopeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D040CD31B772BA5009C7510 /* GyroscopeInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,10 +77,11 @@
 		0D040CB21B772B85009C7510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D040CB41B772B85009C7510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D040CB91B772B85009C7510 /* WatchKit2-Sample-AccelerometerAndGyroscope WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchKit2-Sample-AccelerometerAndGyroscope WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D040CBE1B772B85009C7510 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		0D040CC01B772B85009C7510 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0D040CC21B772B85009C7510 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D040CC41B772B85009C7510 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D040CD21B772BA5009C7510 /* AccelerometerInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerInterfaceController.swift; sourceTree = "<group>"; };
+		0D040CD31B772BA5009C7510 /* GyroscopeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroscopeInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,8 @@
 		0D040CBD1B772B85009C7510 /* WatchKit2-Sample-AccelerometerAndGyroscope WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0D040CBE1B772B85009C7510 /* InterfaceController.swift */,
+				0D040CD21B772BA5009C7510 /* AccelerometerInterfaceController.swift */,
+				0D040CD31B772BA5009C7510 /* GyroscopeInterfaceController.swift */,
 				0D040CC01B772B85009C7510 /* ExtensionDelegate.swift */,
 				0D040CC21B772B85009C7510 /* Assets.xcassets */,
 				0D040CC41B772B85009C7510 /* Info.plist */,
@@ -216,6 +219,7 @@
 		0D040C901B772B85009C7510 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = XuQing;
 				TargetAttributes = {
@@ -294,8 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D040CD41B772BA5009C7510 /* AccelerometerInterfaceController.swift in Sources */,
+				0D040CD51B772BA5009C7510 /* GyroscopeInterfaceController.swift in Sources */,
 				0D040CC11B772B85009C7510 /* ExtensionDelegate.swift in Sources */,
-				0D040CBF1B772B85009C7510 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +531,7 @@
 				0D040CC91B772B85009C7510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D040CCB1B772B85009C7510 /* Build configuration list for PBXNativeTarget "WatchKit2-Sample-AccelerometerAndGyroscope WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				0D040CCD1B772B85009C7510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D040CCF1B772B85009C7510 /* Build configuration list for PBXNativeTarget "WatchKit2-Sample-AccelerometerAndGyroscope" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +549,7 @@
 				0D040CD11B772B85009C7510 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
